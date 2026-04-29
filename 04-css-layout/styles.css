@@ -1,0 +1,336 @@
+:root {
+  --purple: #800080;
+  --light-text-color: #fefefe;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Exercise 01 - Center */
+
+.container {
+  min-height: 100vh;
+  background-color: lavender;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 1rem;
+  background: var(--purple);
+  color: var(--light-text-color);
+  font-size: 1.75rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Common styles for Flexbox and CSS Grid */
+.flex-item,
+.grid-item {
+  padding: 10px;
+  background-color: var(--purple);
+  color: var(--light-text-color);
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item {
+  width: 160px;
+  height: 80px;
+  margin: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Exercise 02 - Flexbox */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.top-of-page {
+  background-color: black;
+  color: white;
+  padding: 2rem 1.25rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-of-page h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: limegreen;
+  text-decoration: underline;
+}
+
+.main-area {
+  background-color: white;
+  padding: 1.75rem 5rem;
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.75rem;
+}
+
+.page-area {
+  width: 28%;
+  height: 520px;
+  padding: 1.5rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page-area h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.page-area p {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.page-area figure {
+  margin: auto 0 0;
+  text-align: center;
+}
+
+.page-area img {
+  max-width: 190px;
+  max-height: 250px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.page-area figcaption {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.bottom-of-page {
+  background-color: black;
+  color: white;
+  padding: 1.75rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Exercise 03 - CSS Grid */
+
+/* Exercise 03 - CSS Grid */
+
+.exercise-03 {
+  margin: 0;
+}
+
+.exercise-03 h1 {
+  margin: 1.25rem 0;
+  text-align: center;
+}
+
+.exercise-03 .grid-container {
+  width: calc(100% - 10px);
+  height: calc(100vh - 110px);
+  margin: 0 auto 5px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 90px 1fr 85px 85px;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.exercise-03 .grid-item {
+  padding: 10px;
+  background-color: var(--purple);
+  color: var(--light-text-color);
+  font-size: 2em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.exercise-03 .item1 {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.exercise-03 .item2 {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+.exercise-03 .item3 {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.exercise-03 .item7 {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.exercise-03 .item4 {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.exercise-03 .item5 {
+  grid-column: 3 / 4;
+  grid-row: 3;
+}
+
+.exercise-03 .item6 {
+  display: none;
+}
+
+.exercise-03 .item8 {
+  grid-column: 1 / 4;
+  grid-row: 4;
+}
+
+/* Exercise 04 - CSS Grid Areas */
+
+.exercise-04 {
+  margin: 0;
+}
+
+.exercise-04 h1 {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.exercise-04 .grid-areas-container {
+  display: grid;
+  gap: 5px;
+  width: 170px;
+  margin: 0 auto;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 110px 110px 30px 30px;
+  grid-template-areas:
+    "header"
+    "article"
+    "section"
+    "aside"
+    "footer";
+}
+
+.exercise-04 .header {
+  grid-area: header;
+}
+
+.exercise-04 .article {
+  grid-area: article;
+}
+
+.exercise-04 .aside {
+  grid-area: aside;
+}
+
+.exercise-04 .section {
+  grid-area: section;
+}
+
+.exercise-04 .footer {
+  grid-area: footer;
+}
+
+.exercise-04 .grid-item {
+  padding: 4px;
+  background-color: var(--purple);
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .exercise-04 .grid-areas-container {
+    max-width: 420px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 26px 95px 95px 26px 26px;
+    grid-template-areas:
+      "header header"
+      "article aside"
+      "section section"
+      "footer footer";
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  .exercise-04 .grid-areas-container {
+    width: calc(100vw - 20px);
+    max-width: none;
+    margin: 0 auto;
+
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 85px 300px 170px 90px;
+    grid-template-areas:
+      "header header"
+      "aside article"
+      "section section"
+      "footer footer";
+  }
+
+  .exercise-04 .grid-item {
+    font-size: 2.25rem;
+    padding: 10px;
+    border-radius: 4px;
+  }
+}
